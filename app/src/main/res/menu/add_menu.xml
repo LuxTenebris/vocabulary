@@ -3,8 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:title="Add"
-        android:id="@+id/AddWord"
+        android:id="@+id/add_word"
         app:showAsAction="always"
         android:icon="@drawable/add_world_icon"
         />
+    <item android:title="Settings"
+        app:showAsAction="never"
+        android:id="@+id/add_menu_settings"
+        />
+
 </menu>
