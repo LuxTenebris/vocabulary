@@ -2,6 +2,7 @@ package com.example.vocabulary;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -33,10 +34,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch(item.getItemId()) {
             case R.id.add_word:
-                Toast.makeText(MainActivity.this, "Ok", Toast.LENGTH_SHORT).show();
+                new AddDialog().show(getSupportFragmentManager(), "addDialog");
                 break;
+
             case R.id.add_menu_settings:
                  startActivity(new Intent(MainActivity.this, SettingsActivity.class));
+
             default:
                 break;
         }
