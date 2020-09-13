@@ -5,5 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
+        <Button
+            android:text="Words"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/open_words"
+            android:layout_gravity="center_horizontal"/>
+    </TableLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

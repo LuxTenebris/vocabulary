@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        findViewById(R.id.open_words).setOnClickListener(this);
     }
 
     @Override
@@ -27,6 +28,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
+        switch(v.getId()) {
+            case R.id.open_words:
+                startActivity(new Intent(MainActivity.this, WordsActivity.class));
+                break;
+
+            default:
+                break;
+        }
 
     }
 
