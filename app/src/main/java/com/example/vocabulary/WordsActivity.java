@@ -15,6 +15,7 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class WordsActivity extends AppCompatActivity {
@@ -40,6 +41,9 @@ public class WordsActivity extends AppCompatActivity {
                             }
 
                         }
+
+                        Collections.sort(words);
+
                         ListView wordsList = findViewById(R.id.words_list);
 
                         wordsList.setAdapter(new WordAdapter(WordsActivity.this, words));

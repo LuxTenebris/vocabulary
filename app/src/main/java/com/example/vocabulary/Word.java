@@ -1,6 +1,6 @@
 package com.example.vocabulary;
 
-public class Word {
+public class Word implements Comparable<Word> {
     private String english;
     private String russian;
 
@@ -23,5 +23,10 @@ public class Word {
 
     public String getRussian(){
         return this.russian;
+    }
+
+    @Override
+    public int compareTo(Word o) {
+        return english.compareTo(o.english);
     }
 }
