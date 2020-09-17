@@ -59,8 +59,8 @@ public class AddDialog extends DialogFragment implements View.OnClickListener {
                         Toast.makeText(getContext(),"You do not enter an russian word",Toast.LENGTH_SHORT).show();
                     } else {
 
-                        note.put("english", st_english);
-                        note.put("russian", st_russian);
+                        note.put("english",st_english.substring(0, 1).toUpperCase() + st_english.substring(1));
+                        note.put("russian",st_russian.substring(0, 1).toUpperCase() + st_russian.substring(1));
                         db.collection("Words")
                                 .add(note)
                                 .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
