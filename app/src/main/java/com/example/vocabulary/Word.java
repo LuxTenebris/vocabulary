@@ -4,6 +4,11 @@ public class Word {
     private String english;
     private String russian;
 
+    public Word(Object english, Object russian) {
+        this.english = (String) english;
+        this.russian = (String) russian;
+    }
+
     public void setEnglish(String english_word){
         this.english = english_word;
     }
