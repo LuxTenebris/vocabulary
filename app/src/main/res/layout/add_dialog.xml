@@ -7,50 +7,48 @@
     android:orientation="vertical"
     android:padding="10dp" >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Write word in english: "
-        android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <EditText
+        android:hint="Word in english"
         android:id="@+id/add_english_word"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="wrap_content" >
-        <requestFocus />
     </EditText>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Write word in russian: "
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+
 
     <EditText
         android:id="@+id/add_translate"
-        android:layout_width="match_parent"
+        android:hint="Word in russian"
+        android:layout_width="300dp"
         android:layout_height="wrap_content" >
-        <requestFocus />
     </EditText>
 
-    <TableLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:layout_marginBottom="10dp"
         >
-        <Button
-            android:layout_width="match_parent"
+        <ImageButton
+            android:backgroundTint="#FFFFFF"
+            android:src="@drawable/baseline_add_circle_black_36"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Add"
-            android:id="@+id/add_word">
+            android:id="@+id/add_word"
+            android:layout_marginRight="100dp">
 
-        </Button>
-        <Button
-            android:layout_width="match_parent"
+        </ImageButton>
+
+        <ImageButton
+            android:backgroundTint="#FFFFFF"
+            android:src="@drawable/baseline_cancel_black_36"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Cansel"
             android:id="@+id/cansel_adding">
-        </Button>
-    </TableLayout>
+        </ImageButton>
+    </LinearLayout>
 
 </LinearLayout>
